@@ -6,9 +6,9 @@ import pandas as pd
 BASE = pathlib.Path(__file__).resolve().parent
 sys.path.append(str(BASE))
 
-from core.data_loader import DataLoader
-from core.strategy import compute_signal
-from core.llm import build_rationale
+from data_loader import DataLoader
+from strategy import compute_signal
+from llm import build_rationale
 
 st.set_page_config(page_title="AI Trading — Final App", layout="wide")
 st.title("AI Trading — Final App")
