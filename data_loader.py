@@ -31,8 +31,8 @@ class DataLoader:
         except Exception:
             pass
         # 3) CSV fallback
-        here = pathlib.Path(__file__).resolve().parent.parent
-        demo = here / "data" / "demo" / f"{symbol.lower()}_demo.csv"
+        here = pathlib.Path(__file__).resolve().parent
+        demo = here / f"{symbol.lower()}_demo.csv"
         if demo.exists():
             df = pd.read_csv(demo)
             return FetchResult(df=df[["Date","Open","High","Low","Close","Volume"]], source="demo-csv")
